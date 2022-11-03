@@ -50,6 +50,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -76,6 +77,28 @@
               ],
               "outputHashing": "all"
             },
+            "github": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.github.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -85,6 +108,7 @@
               "namedChunks": true
             }
           },
+          
           "defaultConfiguration": "production"
         },
         "serve": {
@@ -107,5 +131,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "10f88b6d-9af8-4c11-b218-7cd7e7b3945e"
   }
 }
