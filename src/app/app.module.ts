@@ -18,11 +18,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProductsHeaderComponent } from './components/products-header/products-header.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent,
+    ProductsHeaderComponent,
+    CategoriesComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
