@@ -22,6 +22,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsHeaderComponent } from './components/products-header/products-header.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     HomeComponent,
     ProductsHeaderComponent,
     CategoriesComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     MatSnackBarModule,
 
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
